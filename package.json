@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:local": "NODE_ENV=local mocha automation/test/*.js",
-    "contract": "mocha automation/api/test/*.spec.js && mocha --reporter json > reports/test-results.json"
+    "test:local": "NODE_ENV=local mocha automation/test/*.js --reporter mochawesome",
+    "contract": "NODE_ENV=local mocha automation/api/test/*.spec.js --reporter mochawesome",
+    "contract:reports": "",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "repository": {
     "type": "git",
@@ -25,6 +28,10 @@
     "selenium-webdriver": "^4.16.0"
   },
   "devDependencies": {
+    "eslint": "^8.55.0",
+    "eslint-plugin-mocha": "^10.2.0",
+    "eslint-plugin-react": "^7.33.2",
+    "mochawesome": "^7.1.3",
     "supertest": "^6.3.3"
   }
 }

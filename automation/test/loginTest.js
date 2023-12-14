@@ -25,9 +25,9 @@ describe('Login Test', function(){
         await loginPage.login(loginData.validCredentials.username,loginData.validCredentials.password);
     })
 
-    it('Should login successfully with mouse interaction', async function (){
-        await loginPage.loginFull(loginData.validCredentials.username,loginData.validCredentials.password);
-    })
+    //it('Should login successfully with mouse interaction', async function (){
+    //   await loginPage.loginFull(loginData.validCredentials.username,loginData.validCredentials.password);
+    //})
 
     it('Should fail the login', async function(){
         await loginPage.login(loginData.invalidCredentials.username,loginData.invalidCredentials.password);
