@@ -5,7 +5,7 @@ class LoginPage extends BasePage {
     constructor(driver) {
         super(driver);
         this.url = '/signin';
-        this.errorMessageSelector = By.className('MuiAlert-message');
+        this.errorMessageSelector = By.css('.MuiAlert-message');
     }
 
     async login(username, password) {

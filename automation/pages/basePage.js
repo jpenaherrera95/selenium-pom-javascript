@@ -1,5 +1,4 @@
-const { By } = require('selenium-webdriver');
-const config = require('../config/config')
+const config = require('../config/config');
 
 class BasePage {
     constructor(driver) {
