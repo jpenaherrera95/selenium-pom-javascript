@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:local": "NODE_ENV=local mocha automation/test/*.js"
+    "test:local": "NODE_ENV=local mocha automation/test/*.js",
+    "contract": "mocha automation/api/test/*.spec.js && mocha --reporter json > reports/test-results.json"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
     "chai": "^4.3.10",
     "mocha": "^10.2.0",
     "selenium-webdriver": "^4.16.0"
+  },
+  "devDependencies": {
+    "supertest": "^6.3.3"
   }
 }
